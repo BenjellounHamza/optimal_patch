@@ -7,7 +7,6 @@ S1
 S2
 S3
 
-
 and target file contains:
 
 S1
