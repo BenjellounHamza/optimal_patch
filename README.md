@@ -34,4 +34,7 @@ The operation "-k\nL_old\n" that remove the line K : L_old from the target file 
 Note:
 We can changes the cost of this different operation in the algorithm easly if we wont.
 
-the algorithm use the dynamic programmation that based on the following  
+the algorithm use the dynamic programmation that based on the following Bellman Equation:
+f(i,j) = min(f(i,j-1) + C(i,j), f(i-1, j-1) + 10 + size_of_L_j, f(i-1, j) + 10)
+
+
