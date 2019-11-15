@@ -10,7 +10,7 @@ S3
 
 and target file contains:
 
-S1\\
+S1
 T1
 T2
 
