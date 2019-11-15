@@ -14,13 +14,13 @@ T1 <br/>
 T2 <br/>
 
 we have different way we can do : <br/>
-+ 1 T1 <br/>
-+ 1 T2 <br/>
-- 2 S2 <br/>
-- 3 S3 <br/>
+ + 1 T1 <br/>
+ + 1 T2 <br/>
+ - 2 S2 <br/>
+ - 3 S3 <br/>
 or <br/>
-= 1 T1 <br/>
-= 1 T2 <br/>
+ = 1 T1 <br/>
+ = 1 T2 <br/>
 as we see, each of this two patch have different cost.
 Let us present the cost of each instruction in the patch befor begin:
 
