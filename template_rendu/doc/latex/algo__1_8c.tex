@@ -1,0 +1,80 @@
+\hypertarget{algo__1_8c}{}\section{src/algo\+\_\+1.c File Reference}
+\label{algo__1_8c}\index{src/algo\+\_\+1.\+c@{src/algo\+\_\+1.\+c}}
+{\ttfamily \#include \char`\"{}algo\+\_\+1.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for algo\+\_\+1.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{algo__1_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{algo__1_8c_ab2f366ea409e581dad1e4ad8fb7efc4e}{write\+\_\+patch\+\_\+recur} (int $\ast$$\ast$mat, int i, int j, F\+I\+LE $\ast$patch, \hyperlink{structfichier}{fichier} src, \hyperlink{structfichier}{fichier} dst)
+\item 
+void \hyperlink{algo__1_8c_adb65578042b03445ffc67aa58088a9d5}{algo\+\_\+iter} (const char $\ast$F1, const char $\ast$F2, const char $\ast$P)
+\begin{DoxyCompactList}\small\item\em Cette fonction récupère les fichiers, les traite selon des fonctions dans \hyperlink{outils_8c}{outils.\+c} et remplit le patch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{algo__1_8c_abb9aa376b5a18fad77633f41cef5e31e}\label{algo__1_8c_abb9aa376b5a18fad77633f41cef5e31e}} 
+void $\ast$ {\bfseries ptr\+\_\+begin\+\_\+file}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjelloun hamza, Ait lahmouch Nadir 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{algo__1_8c_adb65578042b03445ffc67aa58088a9d5}\label{algo__1_8c_adb65578042b03445ffc67aa58088a9d5}} 
+\index{algo\+\_\+1.\+c@{algo\+\_\+1.\+c}!algo\+\_\+iter@{algo\+\_\+iter}}
+\index{algo\+\_\+iter@{algo\+\_\+iter}!algo\+\_\+1.\+c@{algo\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{algo\+\_\+iter()}{algo\_iter()}}
+{\footnotesize\ttfamily void algo\+\_\+iter (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F1,  }\item[{const char $\ast$}]{F2,  }\item[{const char $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+Cette fonction récupère les fichiers, les traite selon des fonctions dans \hyperlink{outils_8c}{outils.\+c} et remplit le patch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F1} & Notre fichier source qu\textquotesingle{}on va passer en paramètre \\
+\hline
+{\em F2} & Notre fichier Target qu\textquotesingle{}on va passer en paramètre \\
+\hline
+{\em P} & Notre fichier Patch qu\textquotesingle{}on va passer en paramètre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ne retourne rien, mais écrit dans le patch écrit en paramètre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{algo__1_8c_ab2f366ea409e581dad1e4ad8fb7efc4e}\label{algo__1_8c_ab2f366ea409e581dad1e4ad8fb7efc4e}} 
+\index{algo\+\_\+1.\+c@{algo\+\_\+1.\+c}!write\+\_\+patch\+\_\+recur@{write\+\_\+patch\+\_\+recur}}
+\index{write\+\_\+patch\+\_\+recur@{write\+\_\+patch\+\_\+recur}!algo\+\_\+1.\+c@{algo\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{write\+\_\+patch\+\_\+recur()}{write\_patch\_recur()}}
+{\footnotesize\ttfamily void write\+\_\+patch\+\_\+recur (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{mat,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{F\+I\+LE $\ast$}]{patch,  }\item[{\hyperlink{structfichier}{fichier}}]{src,  }\item[{\hyperlink{structfichier}{fichier}}]{dst }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & La matrice qui mémorise les valeurs de tous les noeuds de notre graphe d\textquotesingle{}appel. \\
+\hline
+{\em i} & indexe qui renvoie aux lignes du fichier source \\
+\hline
+{\em j} & indexe qui renvoie aux lignes du fichier target \\
+\hline
+{\em patch} & Notre fichier patch qu\textquotesingle{}on remplit \\
+\hline
+{\em src} & Le fichier source \\
+\hline
+{\em dst} & Le fichier Destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ne retourne rien, mais écrit dans le patch écrit en paramètre 
+\end{DoxyReturn}

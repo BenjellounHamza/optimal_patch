@@ -1,0 +1,184 @@
+\hypertarget{outils_8c}{}\section{src/outils.c File Reference}
+\label{outils_8c}\index{src/outils.\+c@{src/outils.\+c}}
+{\ttfamily \#include \char`\"{}outils.\+h\char`\"{}}\newline
+Include dependency graph for outils.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{outils_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{outils_8c_a725c5803bf7a75d4d7986a6eb0707fc6}{get\+Filesize} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Retourne la taille du fichier qu\textquotesingle{}on passe en paramètre. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{outils_8c_a0adb6932c68f4e692a6250605c30d81f}{convert\+\_\+file\+\_\+to\+\_\+table} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Convertit un fichier en une table en utilisant mmap. \end{DoxyCompactList}\item 
+int \hyperlink{outils_8c_a3d6a3d7631a318378e5be8194076e340}{get\+\_\+nbr\+\_\+lines} (char $\ast$ptr\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Calcule et donne le nombre de ligne dans un fichier. \end{DoxyCompactList}\item 
+\hyperlink{structfichier}{fichier} \hyperlink{outils_8c_a07333c321cce76c9744973c4b667dbbd}{lines} (char $\ast$ptr\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Remplit les champs de la struture fichier qu\textquotesingle{}on a implémenté (voir \hyperlink{outils_8h_source}{outils.\+h}) \end{DoxyCompactList}\item 
+int \hyperlink{outils_8c_af4d25f3f1939424ad4be8e5e45c63d06}{min\+\_\+2} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Calcule le min de deux nombres. \end{DoxyCompactList}\item 
+int \hyperlink{outils_8c_a81e308f0a31421e49d46cc1772eb0a1f}{min\+\_\+3} (int a, int b, int c)
+\begin{DoxyCompactList}\small\item\em Calcule le min de trois nombres. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{outils_8c_adcaa349924a3d0300b9f8c331023d9ac}\label{outils_8c_adcaa349924a3d0300b9f8c331023d9ac}} 
+int {\bfseries sum} (int $\ast$T, int size)
+\item 
+int \hyperlink{outils_8c_acff80b575580eb0622fdac28dad29805}{C} (int n, int m, \hyperlink{structfichier}{fichier} f1, \hyperlink{structfichier}{fichier} f2)
+\begin{DoxyCompactList}\small\item\em Cette fonction calcule le coût pour transformer une lign A\+\_\+i en la ligne B\+\_\+j. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{outils_8c_abb9aa376b5a18fad77633f41cef5e31e}\label{outils_8c_abb9aa376b5a18fad77633f41cef5e31e}} 
+void $\ast$ {\bfseries ptr\+\_\+begin\+\_\+file}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjelloun hamza, Ait lahmouch Nadir 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{outils_8c_acff80b575580eb0622fdac28dad29805}\label{outils_8c_acff80b575580eb0622fdac28dad29805}} 
+\index{outils.\+c@{outils.\+c}!C@{C}}
+\index{C@{C}!outils.\+c@{outils.\+c}}
+\subsubsection{\texorpdfstring{C()}{C()}}
+{\footnotesize\ttfamily int C (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m,  }\item[{\hyperlink{structfichier}{fichier}}]{f1,  }\item[{\hyperlink{structfichier}{fichier}}]{f2 }\end{DoxyParamCaption})}
+
+
+
+Cette fonction calcule le coût pour transformer une lign A\+\_\+i en la ligne B\+\_\+j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & indice de la ligne du fichier source qu\textquotesingle{}on veut transformer \\
+\hline
+{\em m} & indice de la ligne du fichier target \\
+\hline
+{\em f1} & Fichier Source \\
+\hline
+{\em f2} & Fichier Target \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un int qui est le coût pour transformer une lign A\+\_\+i en la ligne B\+\_\+j 
+\end{DoxyReturn}
+\mbox{\Hypertarget{outils_8c_a0adb6932c68f4e692a6250605c30d81f}\label{outils_8c_a0adb6932c68f4e692a6250605c30d81f}} 
+\index{outils.\+c@{outils.\+c}!convert\+\_\+file\+\_\+to\+\_\+table@{convert\+\_\+file\+\_\+to\+\_\+table}}
+\index{convert\+\_\+file\+\_\+to\+\_\+table@{convert\+\_\+file\+\_\+to\+\_\+table}!outils.\+c@{outils.\+c}}
+\subsubsection{\texorpdfstring{convert\+\_\+file\+\_\+to\+\_\+table()}{convert\_file\_to\_table()}}
+{\footnotesize\ttfamily void $\ast$ convert\+\_\+file\+\_\+to\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Convertit un fichier en une table en utilisant mmap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Le nom du fichier qu\textquotesingle{}on convertir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retounre void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{outils_8c_a3d6a3d7631a318378e5be8194076e340}\label{outils_8c_a3d6a3d7631a318378e5be8194076e340}} 
+\index{outils.\+c@{outils.\+c}!get\+\_\+nbr\+\_\+lines@{get\+\_\+nbr\+\_\+lines}}
+\index{get\+\_\+nbr\+\_\+lines@{get\+\_\+nbr\+\_\+lines}!outils.\+c@{outils.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+nbr\+\_\+lines()}{get\_nbr\_lines()}}
+{\footnotesize\ttfamily int get\+\_\+nbr\+\_\+lines (\begin{DoxyParamCaption}\item[{char $\ast$}]{ptr\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Calcule et donne le nombre de ligne dans un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr\+\_\+file} & Pointeur sur le fichier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un int qui indique le nombre de lignes de ce fichier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{outils_8c_a725c5803bf7a75d4d7986a6eb0707fc6}\label{outils_8c_a725c5803bf7a75d4d7986a6eb0707fc6}} 
+\index{outils.\+c@{outils.\+c}!get\+Filesize@{get\+Filesize}}
+\index{get\+Filesize@{get\+Filesize}!outils.\+c@{outils.\+c}}
+\subsubsection{\texorpdfstring{get\+Filesize()}{getFilesize()}}
+{\footnotesize\ttfamily size\+\_\+t get\+Filesize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Retourne la taille du fichier qu\textquotesingle{}on passe en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Le nom du fichier dont on veut la taille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne la taille d\textquotesingle{}un fichier (size\+\_\+t) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{outils_8c_a07333c321cce76c9744973c4b667dbbd}\label{outils_8c_a07333c321cce76c9744973c4b667dbbd}} 
+\index{outils.\+c@{outils.\+c}!lines@{lines}}
+\index{lines@{lines}!outils.\+c@{outils.\+c}}
+\subsubsection{\texorpdfstring{lines()}{lines()}}
+{\footnotesize\ttfamily \hyperlink{structfichier}{fichier} lines (\begin{DoxyParamCaption}\item[{char $\ast$}]{ptr\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Remplit les champs de la struture fichier qu\textquotesingle{}on a implémenté (voir \hyperlink{outils_8h_source}{outils.\+h}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr\+\_\+file} & Pointeur sur le fichier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Strcuture Fichier avec les champs remplis (nombre de lignes, tableau de lignes, pointeur, tableau avec les tailles de lignes) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{outils_8c_af4d25f3f1939424ad4be8e5e45c63d06}\label{outils_8c_af4d25f3f1939424ad4be8e5e45c63d06}} 
+\index{outils.\+c@{outils.\+c}!min\+\_\+2@{min\+\_\+2}}
+\index{min\+\_\+2@{min\+\_\+2}!outils.\+c@{outils.\+c}}
+\subsubsection{\texorpdfstring{min\+\_\+2()}{min\_2()}}
+{\footnotesize\ttfamily int min\+\_\+2 (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Calcule le min de deux nombres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & un premier nombre \\
+\hline
+{\em b} & un second nombre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un int qui est le minimum des deux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{outils_8c_a81e308f0a31421e49d46cc1772eb0a1f}\label{outils_8c_a81e308f0a31421e49d46cc1772eb0a1f}} 
+\index{outils.\+c@{outils.\+c}!min\+\_\+3@{min\+\_\+3}}
+\index{min\+\_\+3@{min\+\_\+3}!outils.\+c@{outils.\+c}}
+\subsubsection{\texorpdfstring{min\+\_\+3()}{min\_3()}}
+{\footnotesize\ttfamily int min\+\_\+3 (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Calcule le min de trois nombres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & un premier nombre \\
+\hline
+{\em b} & un second nombre \\
+\hline
+{\em c} & un troisème nombre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un int qui est le minimum des trois 
+\end{DoxyReturn}
